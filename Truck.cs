@@ -19,11 +19,6 @@
             Console.WriteLine($"Nákladné auto {Id} má kapicitu: {LoadCapacity} kg");
         }
 
-        public override void LoanedOut()
-        {
-            Console.WriteLine($"Nákladné auto {Id}: {Brand} {Model} a má kapacitu: {LoadCapacity} kg");
-        }
-
         public void LoadCargo()
         {
             Console.WriteLine($"Nákladné auto {Id} nakladá náklad.");
