@@ -11,12 +11,12 @@
 
         public void Drive()
         {
-            Console.WriteLine($"Auto {Id} je pojazdné");
+            Console.WriteLine($"Auto {Id}. {Brand} {Model} je pojazdné");
         }
 
         public override void DisplayInfo ()
         {
-            Console.WriteLine($"Auto {Id} má farbu: {ColorCar}");
+            Console.WriteLine($"Farba Auta {Id}. {Brand} {Model} je: {ColorCar}");
         }
 
         public override void LoanedOut()

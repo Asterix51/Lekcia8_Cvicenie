@@ -11,17 +11,21 @@
 
         public void Drive()
         {
-            Console.WriteLine($"Nákladiak {Id} je pojazdný");
+            Console.WriteLine($"Nákladiak {Id}. {Brand} {Model} je pojazdný");
         }
 
         public override void DisplayInfo()
         {
-            Console.WriteLine($"Nákladné auto {Id} má kapicitu: {LoadCapacity} kg");
+            Console.WriteLine($"Nákladné auto {Id}. {Brand} {Model} má kapicitu: {LoadCapacity} ton");
         }
 
-        public void LoadCargo()
+        public void LoadCargo(int weightCargo)
         {
-            Console.WriteLine($"Nákladné auto {Id} nakladá náklad.");
+            Console.WriteLine($"Nákladné auto {Id}. {Brand} {Model} naložilo {weightCargo} kg nákladu.");
+            if (weightCargo > (LoadCapacity*1000))
+            {
+                Console.WriteLine("Nákladné auto je preťažené");
+            }
         }
     }
 }

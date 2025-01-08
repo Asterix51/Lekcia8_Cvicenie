@@ -2,26 +2,26 @@
 {
     public class Motorcycle : Vehicle, IDriveable
     {
-        public bool HasSidecar { get; set; }
-        public Motorcycle(int id, string brand, string model, bool hasSidecar)
+        public double enginePower { get; set; }
+        public Motorcycle(int id, string brand, string model, double EnginePower)
             : base(id, brand, model)
         {
-            HasSidecar = hasSidecar;
+            enginePower = EnginePower;
         }
 
         public void Drive()
         {
-            Console.WriteLine($"Motorka {Id} je pojazdná");
+            Console.WriteLine($"Motorka {Id}. {Brand} {Model} je pojazdná");
         }
 
         public override void DisplayInfo()
         {
-            Console.WriteLine($"Motorka {Id} je vybavená Sidecarov: {HasSidecar}");
+            Console.WriteLine($"Motorka {Id}. {Brand} {Model} má výkon: {enginePower} kW");
         }
 
         public override void LoanedOut()
         {
-            Console.WriteLine($"Motorka {Id}: {Brand} {Model} je vybavená Sidecarov: {HasSidecar}");
+            Console.WriteLine($"Motorka {Id}: {Brand} {Model} má výkon: {enginePower} kW");
         }
     }
 }
